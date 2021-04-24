@@ -2,7 +2,7 @@ import fenetre
 import sql
 
 current_table='etudiant'
-current_info=['123','nom','adresse','mail','0']
+current_info=['numero','nom','adresse','mail','classe']
 is_rechercher=0
 is_ajouter=0
 is_modifier=0
@@ -68,4 +68,3 @@ def buttons_switch_DISABLED():
   fenetre.boutton_fin['state']= fenetre.tkinter.DISABLED
   fenetre.boutton_suiv['state']= fenetre.tkinter.DISABLED
   fenetre.boutton_prec['state']= fenetre.tkinter.DISABLED
-

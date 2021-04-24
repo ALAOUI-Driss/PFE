@@ -80,6 +80,15 @@ def action_rechercher_sql(info):
   val=(info[0],info[1],info[2],info[3],info[4])
   mycursor.execute(req,val)
 
+def action_retour(numero):
+  req=("SELECT * FROM etudiant WHERE numero = %s")
+  val=(numero,)
+  mycursor.execute(req,val)
+  return(mycursor.fetchone())
+
+
+# mycursor.execute("DELETE FROM etudiant")
+# mycursor.execute("INSERT INTO etudiant SELECT * FROM copy")
 
 # mycursor.execute("SELECT * FROM etudiant")
 # for x in mycursor.fetchall() : print(x)
